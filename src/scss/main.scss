@@ -7,3 +7,451 @@
 @import "fonts";
 @import "vendor";
 @import "base";
+
+body {
+  font-family: $fonts-open-sans;
+  font-weight: 400;
+  color: $color-main;
+  font-size: 16px;
+  background-color: $color-body;
+}
+.header-wrapper {
+	max-width: 1320px;
+	margin: 0 auto;
+	position: relative;
+	color: $color-white;
+	padding: 24px 60px 153px;
+	background-image: linear-gradient(137deg, $color-header-top 5%, $color-header-bottom 62%, $color-header-bottom 100%);
+	display: flex;
+	flex-wrap: wrap;
+}
+.header-main__background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: url("../images/pattern_1x.png");
+	background-repeat: repeat;
+	background-size: 251px 245px;
+	opacity: 0.1;
+	z-index: 1;
+}
+.header-main__logo-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+	margin-bottom: 51px;
+	width: 100%;
+}
+.header-main__information {
+	position: relative;
+	z-index: 2;
+	width: 584px;
+}
+.phone {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.2;
+	transition: .3s ease;
+	margin-bottom: 3px;
+	&:hover {
+		opacity: .8;
+	}
+}
+.operation-mode {
+	font-size: 14px;
+	line-height: 1.71;
+}
+.header-title {
+	font-size: 34px;
+	font-weight: 800;
+	line-height: 1.29;
+	margin-bottom: 20px;
+}
+.net-profit {
+	font-size: 24px;
+	font-style: italic;
+	line-height: 1.5;
+	margin-bottom: 32px;
+}
+.attachments__item {
+	font-size: 20px;
+	line-height: 1.6;
+	display: inline-block;
+}
+.popup {
+	border-bottom: 1px dashed rgba(255,255,255,.3);
+	transition: .3s ease;
+	display: inline-block;
+	cursor: default;
+	&:hover {
+		border-bottom-color: rgba(255,255,255,.6);
+	}
+}
+.attachments__item_last-item {
+	margin-top: 15px;
+}
+.advantages {
+	display: flex;
+	align-items: center;
+}
+.advantages__item {
+	display: flex;
+	align-content: center;
+}
+.attachments {
+	margin-bottom: 30px;
+}
+.advantages-icon {
+	margin-right: 16px;
+	margin-top: 3px;
+}
+.advantages-text {
+	font-size: 16px;
+	line-height: 1.5;
+}
+.header-main__image {
+	position: relative;
+	z-index: 2;
+	margin-left: 60px;
+}
+.template-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 97px 180px 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.section-title {
+	font-size: 38px;
+	font-weight: 800;
+	line-height: 1.26;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.btn-wrapper {
+	text-align: center;
+}
+.br {
+	display: block;
+}
+.text-under-h1 {
+	font-size: 22px;
+	line-height: 1.45;
+	text-align: center;
+	margin-bottom: 73px;
+}
+.btn {
+	border-radius: 4px;
+	box-shadow: 0 12px 24px 0 $color-btn-shadow;
+	background-color: $color-btn;
+	transition: .3s ease;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.56;
+	text-align: center;
+	color: $color-white;
+	padding: 15px 23px 21px;
+}
+.exel-picture {
+	margin-bottom: 64px;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px 0 rgba(53, 93, 93, 0.3);
+	overflow: hidden;
+}
+.bar-chart {
+	width: 100%;
+}
+.bar-chart__title {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.section-title_income-section {
+	margin-bottom: 53px;
+}
+.bar-chart__block {
+	height: 40px;
+	padding: 9px 16px 11px;
+	display: flex;
+	justify-content: flex-end;
+	transition: .3s ease;
+	border-radius: 2px;
+}
+.bar-chart__text {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.43;
+	color: $color-white;
+}
+.bar-chart__block_blue {
+	background-color: $color-blue;
+}
+.bar-chart__block_typical-clinic {
+	width: 504px;
+}
+.bar-chart__item + .bar-chart__item {
+	margin-top: 38px;
+}
+.bar-chart__block_new-smile {
+	width: 840px;
+}
+.bar-chart__block_mint-blue {
+	background-color: $color-mint-blue;
+}
+.bar-chart {
+	margin-bottom: 33px;
+}
+.income-block {
+	margin-top: 63px;
+}
+.h3-section-title {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1.33;
+	text-align: center;
+	margin-bottom: 71px;
+}
+.income-block__title {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.45;
+	margin-bottom: 39px;
+}
+.income-table__header {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
+	text-align: left;
+}
+.income-table__title {
+	font-size: 15px;
+	line-height: 1.6;
+	padding-right: 48px !important;
+	& span {
+
+	}
+}
+.income-table__header:first-child {
+	width: 272px;
+}
+.income-table__header:nth-child(2) {
+	width: 256px;
+}
+.income-table__header:last-child {
+	width: 312px;
+}
+.income-table {
+	width: 100%;
+	margin-bottom: 55px;
+	& td {
+		padding-top: 0;
+		padding-left: 0;
+		padding-bottom: 8px;
+	}
+	& th {
+		padding: 0 0 18px 0;
+	}
+}
+.income-table__second-cell {
+	padding-right: 56px !important;
+}
+.percent__text {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.33;
+	color: $color-white;
+}
+.percent {
+	height: 56px;
+	display: flex;
+	justify-content: flex-start;
+	padding: 13px 16px 19px;
+}
+.percent-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.percent_blue {
+	background-color: $color-blue;
+}
+.percent_soft-green {
+	background-color: $color-soft-green;
+}
+.percent_orange {
+	background-color: $color-percent-orange;
+}
+.percent_bright-orange {
+	background-color: $color-bright-orange;
+}
+.percent_red {
+	background-color: $color-red;
+}
+.percent_blue.percent_left {
+	width: 190px;
+}
+.percent_blue.percent_right {
+	width: 302px;
+}
+.percent_soft-green.percent_left {
+	width: 179px;
+}
+.percent_soft-green.percent_right {
+	width: 292px;
+}
+.percent_orange.percent_left {
+	width: 167px;
+}
+.percent_orange.percent_right {
+	width: 279px;
+}
+.percent_bright-orange.percent_left {
+	width: 156px;
+}
+.percent_bright-orange.percent_right {
+	width: 269px;
+}
+.percent_red.percent_left {
+	width: 144px;
+}
+.percent_red.percent_right {
+	width: 257px;
+}
+.triangle {
+	display: flex;
+}
+.typical-clinic {
+	width: 168px;
+}
+.new-smile-clinic {
+	width: 336px;
+}
+.bar-chart__block-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+.bar-chart__block-wrapper_blue {
+	background-color: $color-soft-blue;
+}
+.bar-chart__block-wrapper_mint-green {
+	background-color: $color-super-mint;
+}
+.chart-wrapper-text {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.43;
+	color: $color-text-chart;
+	padding: 9px 16px 11px;
+}
+.content-p {
+	font-size: 18px;
+	line-height: 1.78;
+	margin-bottom: 29px;
+}
+.bar-chart__block-wrapper_typical-clinic {
+	width: 504px;
+}
+.content-ul__item {
+	font-size: 18px;
+	line-height: 1.78;
+	position: relative;
+}
+.content-ul__item + .content-ul__item {
+	margin-top: 16px;
+}
+b {
+	font-weight: 700;
+}
+.content-ul:not(:last-child) {
+	margin-bottom: 32px;
+}
+.content-p_automation {
+	margin-bottom: 16px;
+}
+.section-title_automation {
+	margin-bottom: 48px;
+}
+.template-wrapper_grey {
+	background-color: $color-grey-background;
+	border-radius: 20px;
+	margin-top: 127px;
+}
+.content-slider-wrapper {
+	width: 100%;
+}
+.before-slider {
+	margin-bottom: 71px;
+}
+.content-slider .slick-list {
+	border-radius: 8px;
+	box-shadow: 0 4px 12px 0 rgba(53, 93, 93, 0.3);
+}
+.content-slider-arrow {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: $color-slick-arrow;
+	transition: .3s ease;
+	z-index: 3;
+	margin-top: -15px;
+	&:hover, &:focus {
+		background-color: $color-slick-arrow-hover;
+	}
+	&::before, &::after {
+		content: none;
+	}
+	&.slick-disabled {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+.svg-prev {
+	transform: rotate(180deg);
+}
+.content-slider {
+	margin-bottom: 0 !important;
+	& .slick-dots {
+		position: static;
+		display: flex;
+		justify-content: center;
+		margin-top: 24px;
+	}
+	& li button {
+		padding: 0;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: $color-slick-dots;
+		opacity: .5;
+		transition: .3s ease;
+		&::before {
+		content: none;
+		}
+	}
+	& li {
+		width: auto;
+		height: auto;
+		margin: 0 4px;
+	}
+	& li.slick-active button {
+		opacity: 1;
+	}
+}
+.content-slider-arrow_next {
+	right: -20px;
+}
+.content-slider-arrow_prev {
+	left: -20px;
+}
+.template-wrapper_automation {
+	padding-bottom: 130px;
+}
+
+@import "media";
