@@ -2,4 +2,10 @@
 	.header-main__background {
 		background-image: url("../images/pattern_2x.png");
 	}
+	.conditions-wrapper {
+		background: url("../images/pattern_2x.png") repeat;
+	}
+	.conditions::before {
+		background-image: url("../images/man_2x.png");
+	}
 }

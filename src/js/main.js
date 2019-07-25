@@ -1,9 +1,169 @@
 import './vendor';
+require ('./vendor/jquery.inputmask.min');
+require ('./vendor/jquery.viewportchecker.min');
+require ('./vendor/jquery.animateNumber.min');
 
 (function addedContentSlider() {
     initContentSlider(".content-slider-js");
 })();
+(function addFocus() {
+    $('.input-phone').focus(function () {
+        $(this).parent('.form-item').addClass('focus');
+    });
+    $('.input-phone').blur(function () {
+        $(this).parent('.form-item').removeClass('focus');
+    });
+})();
+(function addPhoneMask() {
+    $('.user-phone').inputmask("+7 (999) 999-99-99", {
+        placeholder: "_",
+        // showMaskOnFocus: false,
+    })
+})();
+(function addConsultationPopup() {
+    $('.consultation-example').magnificPopup({
+        items: {
+            src: '.consultation-popup',
+            type: 'inline',
+        },
+        mainClass: 'magnific-modal',
+    });
+})();
+(function validationDesctopForm() {
+    validationForm('.conditions-form', '.form-item-wrapper', '.good-text-wrapper', true, 'phone');
+})();
+(function goPrev() {
+    $('.prev').on('click', function (e) {
+        e.preventDefault();
 
+        $('.good-text-wrapper').removeClass('show-information');
+        $('.form-item-wrapper').removeClass('hide-information');
+        $('.conditions').removeClass('conditions_success');
+        $('.input-phone').focus();
+    });
+})();
+(function openCallbackForm() {
+    initMagnificPopup('.js-callback-form', '.js-open-callback');
+})();
+(function openExcursionForm() {
+    initMagnificPopup('.js-excursion-form', '.js-open-excursion');
+})();
+(function openFinancialModelForm() {
+    initMagnificPopup('.js-financial-model-form','.js-open-financial-model');
+})();
+(function openEducationSystemForm() {
+    initMagnificPopup('.js-education-system-form', '.js-open-education-system');
+})();
+(function openEducationSystemDoctorForm() {
+    initMagnificPopup('.js-education-system-doctor-form', '.js-open-education-system-doctor');
+})();
+(function openExamplesInstructionsForm() {
+    initMagnificPopup('.js-examples-instructions','.js-open-examples-instructions');
+})();
+(function validatedCallBackForm() {
+    validationForm('.validate-callback-form', '.success', '.thanks-text-wrapper', true, 'mail');
+})();
+(function validatedExcursionForm() {
+    validationForm('.validate-excursion-form', '.success', '.thanks-text-wrapper', true, 'phone');
+})();
+(function validatedFinancialModelForm() {
+    validationForm('.validate-financial-model-form','.success', '.thanks-text-wrapper', true, 'mail');
+})();
+(function validatedEducationSystemForm() {
+    validationForm('.validate-education-system', '.success', '.thanks-text-wrapper', true, 'mail')
+})();
+(function validatedEducationSystemDoctorForm() {
+    validationForm('.validate-education-system-doctor', '.success', '.thanks-text-wrapper', true, 'mail')
+})();
+(function validatedExamplesInstructionsForm() {
+    validationForm('.validate-examples-instructions', '.success', '.thanks-text-wrapper', true, 'mail');
+})();
+(function showMoreReviews() {
+    $('.show-more').on('click', function () {
+        var flag = true;
+        $('.hide-reviews .reviews-list__item').each(function (e, i) {
+            if ($(this).css('display') == 'none' && flag) {
+
+                $(this).css({opacity: 0, display: 'flex'}).animate({
+                    opacity: 1
+                }, 1000);
+
+                if (e == $('.hide-reviews .reviews-list__item').length - 1) {
+                    $('.show-more').hide();
+                }
+                flag = false;
+            }
+        });
+
+    });
+})();
+(function showPopup() {
+    $(".popup").mousemove(
+        function (e) {
+            var thisPopup = $(this).data('popup-wrapper');
+
+            $('#' + thisPopup).show();
+            $('#' + thisPopup).css('left',(e.pageX+1)+'px').css('top',(e.pageY+1)+'px');
+        }
+    ).mouseleave(function() {
+        $('.popup-wrapper').hide();
+    });
+})();
+(function initViewportchecker() {
+    $('.landing-section').viewportChecker({
+        classToAdd: 'animation',
+        offset: "50%",
+        callbackFunction: function() {
+            if ($('.income-section').hasClass('animation')) {
+                animationNumber('.income-section .bar-chart__block_typical-clinic .bar-number', 600000);
+                animationNumber('.income-section .bar-chart__block_new-smile .bar-number', 1000000);
+            }
+        },
+    });
+})();
+(function initIncomeViewportchecker() {
+    $('.income-block').viewportChecker({
+        classToAdd: 'animationStart',
+        offset: "100%",
+        callbackFunction: function() {
+                animationNumber('.bar-chart__block.typical-clinic .bar-number', 200000);
+                animationNumber('.bar-chart__block.new-smile-clinic .bar-number', 400000);
+        },
+    });
+})();
+
+function animationNumber(initSelector,number) {
+                var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ');
+                $(initSelector).animateNumber({
+                    number: number,
+                    numberStep: comma_separator_number_step,
+                },{
+                    duration: 1500,
+                    easing: 'swing',
+                });
+}
+function initMagnificPopup(initButton, openPopup) {
+    $(initButton).magnificPopup({
+        items: {
+            src: openPopup,
+            type: 'inline',
+        },
+        mainClass: 'magnific-modal',
+        removalDelay: 250,
+        callbacks: {
+            beforeClose: function() {
+                if ($('.thanks-text-wrapper').hasClass('show-information')) {
+                    var that = this.content;
+                    setTimeout(function() {
+                        $('.thanks-text-wrapper').removeClass('show-information');
+                        $('.success').removeClass('hide-information');
+                        $(that).find('.callback-input').val('');
+                    }, 250)
+                }
+            },
+        },
+    });
+}
 function initContentSlider(selector) {
     $(selector).slick({
         fade: true,
@@ -41,3 +201,61 @@ function initContentSlider(selector) {
         dots: true,
     });
 }
+function validationForm(formInit, formWrapper, textGood, animation, phoneOrMail) {
+    $.validator.addMethod("minlenghtphone", function (value, element) {
+
+            return value.replace(/\D+/g, '').length > 10;
+        },
+        "");
+    $(formInit).validate({
+        rules: {
+            phone:  {
+                minlenghtphone: true,
+            },
+        },
+        invalidHandler: function (e, v) {
+            if (animation) {
+                var animationForm = v.errorContext;
+                animationForm.addClass('animation');
+                setTimeout(function () {
+                    animationForm.removeClass('animation');
+                }, 400);
+            }
+        },
+        submitHandler: function(form) {
+            var inputPhone = $(form).find('.user-phone');
+            var inputMail = $(form).find('.user-mail');
+            var inputValuePhone = inputPhone.val();
+            var inputValueMail = inputMail.val();
+
+            if (phoneOrMail == 'phone') {
+                $(textGood).find('.current-phone').text(inputValuePhone);
+            } else {
+                $(textGood).find('.current-mail').text(inputValueMail);
+            }
+
+            $.ajax({
+                type: $(form).attr('method'),
+                url: $(form).attr('action'),
+                data: new FormData(form),
+
+                cache: false,
+                contentType: false,
+                processData: false,
+
+                dataType: 'text',
+                success: function () {
+                    $(formWrapper).addClass('hide-information');
+                    $(textGood).addClass('show-information');
+                    if ($(form).hasClass('conditions-form')) {
+                        $(form).parents('.conditions').addClass('conditions_success');
+                    }
+                },
+                error: function() {
+                    console.log('Упс... Что-то пошло не так!');
+                }
+            });
+            return false;
+        },
+    });
+};

@@ -4,13 +4,17 @@
 
 $color-black: #000;
 $color-white: #fff;
-$color-placeholder: #212426;
+$color-placeholder: rgba(33, 36, 38, .6);
 $color-main: #212426;
 $color-body: #ffffff;
 $color-header-top: #00d6d6;
 $color-header-bottom: #a150cf;
 $color-btn: #a150cf;
 $color-btn-shadow: rgba(161, 80, 207, 0.3);
+$color-btn-hover: rgba(178,97,224,1);
+$color-btn-active: rgba(146,70,190,1);
+$color-btn-shadow-hover: rgba(161, 80, 207, 0.3);
+$color-btn-shadow-focus: rgba(161, 80, 207, 0.3);
 $color-blue: #007aff;
 $color-mint-blue: #00d6d6;
 $color-soft-green: #1abe94;
@@ -22,8 +26,24 @@ $color-super-mint: #e5fafa;
 $color-text-chart: #8094aa;
 $color-grey-background: #eef9f9;
 $color-slick-arrow: rgba(0, 214, 214, 0.8);
-$color-slick-arrow-hover: rgba(0, 214, 214, 1);
+$color-slick-arrow-hover: rgba(0, 217, 217, 0.8);
+$color-slick-arrow-active: rgba(0,214,214,1);
+$color-slick-arrow-focus: rgba(191,221,251,1);
 $color-slick-dots: #70777d;
+$color-grey-line: #dadada;
+$color-dots-grey: #cdd1d4;
+$color-link-hover: #fc4b71;
+$color-border-link: rgba(0, 122, 255, .3);
+$color-border-link-hover: rgba(252, 75, 113, .6);
+$color-principles: #4f5a61;
+$color-background-form-desctop: rgba(235,237,241,.6);
+$color-check-svg: rgb(0, 214, 214);
+$color-success: #eef9f9;
+$color-success-border: #cfe4e4;
+$color-reviews-block: #f9f9f9;
+$color-gold: #e19d16;
+$color-reviews-grey: #d9d9d9;
+
 
 // FONTS
 $fonts-open-sans: 'Open Sans', sans-serif;

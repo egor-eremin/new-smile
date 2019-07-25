@@ -1,0 +1,110 @@
+@-webkit-keyframes shake-horizontal {
+	0%,
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	16.6%,
+	49.8%,
+	83% {
+		-webkit-transform: translateX(-10px);
+		transform: translateX(-10px);
+	}
+	33.2%,
+	66.4% {
+		-webkit-transform: translateX(10px);
+		transform: translateX(10px);
+	}
+}
+@keyframes shake-horizontal {
+	0%,
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	16.6%,
+	49.8%,
+	83% {
+		-webkit-transform: translateX(-10px);
+		transform: translateX(-10px);
+	}
+	33.2%,
+	66.4% {
+		-webkit-transform: translateX(10px);
+		transform: translateX(10px);
+	}
+}
+@keyframes animationSuccess {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	60% {
+		opacity: 1;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes animationOpenCallbackForm {
+	0% {
+		transform: translateY(-200px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes animationCloseCallbackForm {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-200px);
+		opacity: 0;
+	}
+}
+@keyframes animateChartTypicalClinic1 {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 504px;
+	}
+}
+@keyframes animateChartNewSmile1 {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 840px;
+	}
+}
+@keyframes animateChartTypicalClinic2 {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 168px;
+	}
+}
+@keyframes animateChartNewSmile2 {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 336px;
+	}
+}
+@keyframes animationNumberChart {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
