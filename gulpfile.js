@@ -3,6 +3,7 @@ let gulpLoadPlugins = require('gulp-load-plugins');
 let yargs = require('yargs');
 let path = require('path');
 let webpackConfig = require('./webpack.config');
+let gulpSass = require('gulp-sass')(require('sass'));
 
 let emittyPug;
 let errorHandler;
@@ -222,7 +223,7 @@ gulp.task('scss', () => {
 		}))
 		.pipe($.if(argv.debug, $.debug()))
 		.pipe($.sourcemaps.init())
-		.pipe($.sass().on('error', $.sass.logError))
+		.pipe(gulpSass.sync().on('error', gulpSass.logError))
 		.pipe($.postcss([
 			argv.minifyCss ?
 				$.cssnano({

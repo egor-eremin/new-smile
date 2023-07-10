@@ -9,3 +9,686 @@
 		background-image: url("../images/man_2x.png");
 	}
 }
+@media (max-width: 1320px) {
+	.header-title {
+		font-size: 30px;
+	}
+	.net-profit {
+		font-size: 22px;
+	}
+	.attachments__item {
+		font-size: 18px;
+	}
+	.advantages-text {
+		font-size: 14px;
+	}
+	.header-main__image {
+		margin-left: 30px;
+	}
+	.header-wrapper {
+		padding: 24px 30px 100px;
+	}
+ }
+@media (max-width: 1200px) {
+	.br {
+		display: inline;
+	}
+	.section-title {
+		font-size: 35px;
+	}
+	.text-under-h1 {
+		font-size: 20px;
+	}
+	.template-wrapper {
+		padding: 97px 150px 24px;
+	}
+	.template-wrapper_grey {
+		padding-bottom: 130px;
+		border-radius: 0;
+	}
+}
+@media (max-width: 1024px) {
+	.template-wrapper {
+		padding: 97px 80px 24px;
+	}
+	.template-wrapper_grey {
+		padding-bottom: 130px;
+	}
+	.header-main__image {
+		display: none;
+	}
+	.header-main__information {
+		width: 100%;
+	}
+	.advantages__item:not(:last-child) {
+		margin-right: 15px;
+	}
+	.advantages__item {
+		width: 300px;
+	}
+	.section-title {
+		font-size: 32px;
+	}
+	.text-under-h1 {
+		font-size: 18px;
+	}
+	.popup-wrapper {
+		display: none !important;
+	}
+}
+@media (max-width: 900px) {
+	.no-analogues-slider-wrapper {
+		width: 100vw;
+		overflow-x: auto;
+		overflow-y: hidden;
+		display: flex;
+		padding: 10px 30px 0;
+		position: relative;
+		margin-bottom: 50px;
+		&::after {
+			content: '';
+			width: 15px;
+			height: 20px;
+			right: 0;
+			top: 0;
+			position: relative;
+			display: block;
+			flex-shrink: 0;
+		}
+	}
+	.no-analogues__item {
+		width: 500px;
+		flex-shrink: 0;
+		margin-right: 15px;
+	}
+	.content-wrapper_no-analogues {
+		margin-bottom: 20px;
+	}
+	.income-table, .regular-customers-desctop {
+		display: none;
+	}
+	.income-block-mobile, .regular-customers-mobile {
+		display: block;
+	}
+	.template-wrapper {
+		padding: 97px 30px 24px;
+	}
+	.template-wrapper_grey {
+		padding-bottom: 100px;
+	}
+	.template-wrapper_grey {
+		margin-top: 97px;
+	}
+	.regular-customers-mobile__header {
+		margin-bottom: 60px;
+	}
+}
+@media (max-width: 800px) {
+	.advantages {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.advantages__item {
+		margin-bottom: 32px;
+	}
+	.advantages-text {
+		display: flex;
+		align-items: center;
+	}
+	.advantages__item:last-child {
+		margin-bottom: 0;
+	}
+	.bar-chart__item {
+		position: relative;
+	}
+	.bar-chart__text {
+		position: absolute;
+		bottom: -7px;
+		left: 0;
+		transform: translateY(100%);
+		font-style: italic;
+		line-height: 1.54;
+		color: #212426;
+		opacity: 1;
+	}
+	.bar-chart__item + .bar-chart__item {
+		margin-top: 76px;
+	}
+	.income-block {
+		margin-top: 71px;
+	}
+	.income-section.animation .bar-chart__text_1 {
+		animation: none;
+	}
+	.bar-chart__block-wrapper {
+		position: relative;
+	}
+	.chart-wrapper-text {
+		position: absolute;
+		right: 0;
+		bottom: -7px;
+		padding: 0;
+		transform: translateY(100%);
+		font-style: italic;
+		line-height: 1.54;
+		color: #70777d;
+	}
+	.income-block.animationStart .bar-chart__text_2 {
+		animation: none;
+	}
+	.no-analogues__item {
+		width: 350px;
+	}
+	.content-picture {
+		height: 250px;
+	}
+	.conditions::before {
+		display: none;
+	}
+	.conditions {
+		padding: 47px 73px 44px;
+	}
+	.conditions-head-mobile {
+		display: flex;
+		& .conditions-head-mobile__img {
+			margin-right: 16px;
+		}
+	}
+	.conditions-head {
+		display: none;
+	}
+}
+@media (max-width: 760px) {
+	.reviews-img {
+		display: none;
+	}
+}
+@media (max-width: 640px) {
+	.header-wrapper {
+		padding: 12px 16px 53px;
+	}
+	.header-main__logo svg {
+		width: 131px;
+		height: 36px;
+	}
+	.phone {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.71;
+	}
+	.operation-mode {
+		font-size: 10px;
+		line-height: 1.6;
+	}
+	.header-title {
+		font-size: 16px;
+		font-weight: 800;
+		line-height: 1.5;
+		margin-bottom: 12px;
+	}
+	.header-main__logo-wrapper {
+		margin-bottom: 29px;
+	}
+	.net-profit {
+		font-size: 15px;
+		font-style: italic;
+		line-height: 1.6;
+		margin-bottom: 22px;
+	}
+	.attachments__item {
+		font-size: 14px;
+		line-height: 1.71;
+	}
+	.advantages-text {
+		font-size: 14px;
+		line-height: 1.71;
+	}
+	.attachments {
+		margin-bottom: 24px;
+	}
+	.advantages__item {
+		margin-bottom: 20px;
+	}
+	.section-title {
+		text-align: left;
+		font-size: 16px;
+		font-weight: 800;
+		line-height: 1.5;
+		margin-bottom: 12px;
+	}
+	.text-under-h1 {
+		font-size: 15px;
+		line-height: 1.6;
+		text-align: left;
+		margin-bottom: 34px;
+	}
+	.template-wrapper {
+		padding: 46px 16px 24px;
+	}
+	.btn {
+		padding: 9px 12px 11px;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 2;
+		width: 240px;
+	}
+	.btn-download-plan {
+		width: 288px;
+		margin: 0 auto;
+	}
+	.exel-picture {
+		margin-bottom: 32px;
+	}
+	.bar-chart__title {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.71;
+		margin-bottom: 9px;
+	}
+	.bar-chart__text {
+		font-size: 13px;
+		font-style: italic;
+		line-height: 1.54;
+	}
+	.bar-chart__item + .bar-chart__item {
+		margin-top: 50px;
+	}
+	.section-title_income-section {
+		margin-bottom: 25px;
+	}
+	.h3-section-title {
+		text-align: left;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.5;
+		margin-bottom: 28px;
+		width: 100%;
+	}
+	.income-block {
+		margin-top: 37px;
+	}
+	.income-block__title {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.5;
+		margin-bottom: 28px;
+	}
+	.income-block-mobile__link {
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 1.6;
+		padding-bottom: 11px;
+	}
+	.income-block-mobile__header-block::before, .regular-customers-mobile__header::before {
+		left: -16px;
+	}
+	.income-block-mobile__header-block, .regular-customers-mobile__header {
+		margin-bottom: 24px;
+	}
+	.income-mobile-title {
+
+	}
+	.percent__text {
+		font-size: 14px;
+		display: flex;
+		align-items: center;
+	}
+	.regular-customers-mobile__header {
+		margin-bottom: 39px;
+	}
+	.content-wrapper li,
+	.content-wrapper p {
+		font-size: 14px;
+		line-height: 1.71;
+	}
+	.template-wrapper_grey {
+		margin-top: 53px;
+		padding-top: 46px;
+		padding-bottom: 52px;
+	}
+	.slider-picture {
+		height: 100%;
+	}
+	.content-slider .slick-track {
+		height: 300px;
+	}
+	.content-slider .slick-slide > div,
+	.content-slider__item {
+		height: 100%;
+	}
+	.content-wrapper ul:not(:last-child) {
+		margin-bottom: 21px;
+	}
+	.content-wrapper_automation {
+		margin-bottom: 29px;
+	}
+	.landing-section_grey {
+		margin-bottom: 0;
+	}
+	.section-title_no-analogues {
+		margin-bottom: 21px;
+	}
+	.content-wrapper_margin-b-58 {
+		margin-bottom: 29px;
+	}
+	.no-analogues__item {
+		width: 288px;
+	}
+	.content-img {
+		height: 148px;
+		margin-bottom: 23px;
+	}
+	.content-picture {
+		height: auto;
+	}
+	.content-wrapper_no-analogues h4 {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.71;
+	}
+	.btn-wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.bar-chart__block-wrapper_typical-clinic {
+		width: 100%;
+	}
+	.treatment-protocols {
+		margin-top: 0;
+	}
+	.content-wrapper_treatment-protocols {
+		margin-bottom: 16px;
+	}
+	.advantages-text {
+		font-size: 13px;
+		line-height: 1.54;
+	}
+	.advantages {
+		margin-bottom: 33px;
+	}
+	.principles__title {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.71;
+		margin-bottom: 4px;
+	}
+	.principles__text {
+		font-size: 14px;
+		line-height: 1.71;
+	}
+	.principles {
+		margin-top: -7px;
+		margin-bottom: 24px;
+	}
+	.principles__item {
+		margin-bottom: 20px;
+	}
+	.consultation-example {
+		margin-top: 0;
+		font-size: 14px;
+		line-height: 1.71;
+	}
+	.conditions {
+		margin-top: 53px;
+		width: calc(100% + 32px);
+		border-radius: 0;
+		padding: 37px 16px 55px;
+	}
+	.conditions-head__title {
+		font-size: 14px;
+		font-style: italic;
+		line-height: 1.43;
+	}
+	.conditions-head-mobile__img {
+		width: 42px;
+		height: 42px;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			font-family: 'object-fit: contain;';
+		}
+	}
+	.conditions-head-mobile {
+		margin-bottom: 20px;
+	}
+	.conditions__title {
+		font-size: 16px;
+		font-weight: 800;
+		line-height: 1.5;
+		margin-bottom: 9px;
+	}
+	.conditions__text {
+		font-size: 14px;
+		line-height: 1.71;
+		margin-bottom: 29px;
+	}
+	.form-item {
+		width: 288px;
+	}
+	.form-submit {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.71;
+		width: 110px;
+	}
+	.input-phone {
+		width: 178px;
+		font-size: 16px;
+		line-height: 1.5;
+		padding: 10px 16px 14px;
+	}
+	.form-item-text {
+		margin-top: 13px;
+		font-size: 14px;
+		font-style: italic;
+		line-height: 1.43;
+	}
+	.conditions-form {
+		margin-bottom: 0;
+	}
+	.section-title_why {
+		margin-bottom: 30px;
+	}
+	.why {
+		margin-top: -24px;
+	}
+	.content-wrapper_why li {
+		padding-left: 23px;
+	}
+	.content-wrapper_why {
+		margin-bottom: 53px;
+	}
+	.template-wrapper_grey-reviews {
+		margin-top: 29px;
+	}
+	.reviews-prev-text {
+		align-items: flex-start;
+		padding-bottom: 33px;
+	}
+	.section-title_reviews {
+		margin-bottom: 20px;
+	}
+	.reviews-rating__number-of-reviews {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+	.reviews-rating__text {
+		font-size: 14px;
+		line-height: 1.71;
+	}
+	.reviews-list__item {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.reviews-list {
+		margin-top: 35px;
+	}
+	.reviews-list__avatar {
+		margin-top: 0;
+		margin-bottom: 8px;
+	}
+	.reviews-list__title {
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.75;
+		margin-bottom: 1px;
+	}
+	.reviews-list__link {
+		margin-bottom: 14px;
+	}
+	.show-more {
+		margin: 0 auto 0 0;
+		font-size: 14px;
+		line-height: 1.71;
+		height: 32px;
+		padding: 3px 17px 5px;
+	}
+	.content-wrapper blockquote p {
+		font-size: 15px;
+		line-height: 1.6;
+	}
+	.content-wrapper blockquote::before {
+		width: 4px;
+	}
+	.content-wrapper blockquote {
+		padding-left: 16px;
+		margin-bottom: 23px;
+	}
+	.template-wrapper_two-reviews {
+		padding-bottom: 0;
+		& .content-wrapper > p:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.text-under-h1_profitable-business {
+		margin-bottom: 21px;
+	}
+	.template-wrapper_profitable-business {
+		padding-bottom: 0;
+	}
+	.section-title_development {
+		margin-bottom: 20px;
+	}
+	.content-wrapper_development li::before {
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+	.exel-picture_development {
+		margin-top: 33px;
+	}
+	.content-wrapper_opening-stages li {
+		padding-left: 36px;
+	}
+	.content-wrapper_opening-stages li::before {
+		top: 2px;
+	}
+	.footer-text {
+		font-size: 12px;
+		line-height: 1.67;
+	}
+	.income-block-mobile__link, .regular-customers-mobile__link {
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+	.success {
+		padding: 32px 16px 40px;
+	}
+	.callback-popup-title {
+		font-size: 16px;
+		font-weight: 800;
+		line-height: 1.5;
+		margin-bottom: 24px;
+	}
+	.callback-popup-text {
+		font-size: 14px;
+		padding-right: 8px;
+		width: 100%;
+		margin-bottom: 8px;
+	}
+	.callback-popup-item {
+		margin-bottom: 16px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.callback-popup-input {
+		width: 100%;
+	}
+	.callback-input {
+		width: 100%;
+	}
+	.btn_send-message {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 2;
+		padding: 9px 18px 11px;
+		width: auto;
+	}
+	.thanks-title {
+		font-size: 18px;
+	}
+	.thanks-text {
+		font-size: 14px;
+	}
+	.template-wrapper_income-section {
+		padding-bottom: 0;
+	}
+	.content-wrapper_one-p {
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 480px) {
+	.slider-picture {
+		height: 100%;
+	}
+	.content-slider .slick-track {
+		height: 148px;
+	}
+	.slider-img {
+		object-position: center;
+		object-fit: cover;
+		font-family: 'object-fit: cover; object-position: center;';
+	}
+	.regular-customers-mobile__title-list,
+	.income-block-mobile__title-list {
+		width: 100vw;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+	.regular-customers-mobile__link,
+	.income-block-mobile__link {
+		white-space: nowrap;
+		display: flex;
+	}
+	.regular-customers-mobile__title:last-child .regular-customers-mobile__link {
+		position: relative;
+		&::after {
+			content: '';
+			width: 47px;
+			height: 5px;
+			display: block;
+		}
+	}
+	.income-block-mobile__title:last-child .income-block-mobile__link {
+		position: relative;
+		&::after {
+			content: '';
+			width: 47px;
+			height: 5px;
+			display: block;
+		}
+	}
+	.income-section {
+		overflow: hidden;
+	}
+	.advantages__item:not(:last-child) {
+		margin-right: 0;
+	}
+	.advantages__item {
+		width: 100%;
+	}
+}
